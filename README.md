@@ -112,3 +112,46 @@ The script expects an input JSON file named `vegan_resto.json` in the following 
   },
   // ... more restaurant objects
 ]
+
+
+Output JSON Format
+
+The cleaned_vegan_resto.json file will contain data structured as follows:
+JSON
+
+[
+  {
+    "name": "Restaurant Name",
+    "url": "URL to restaurant page",
+    "image_url": "URL to main image",
+    "rating": "Rating value (e.g., '4.5')",
+    "review_count": "Cleaned review count (e.g., '135')",
+    "cuisine_type": "Cuisine type (e.g., 'VeganRestaurant')",
+    "status": "Open/Closed status (e.g., 'Open Now')",
+    "abstract": "Short abstract of restaurant offerings",
+    "full_description": "Detailed description of the restaurant",
+    "phone_number": "Cleaned phone number (e.g., '+33-123456789')",
+    "address": "Full address",
+    "website": "Website URL",
+    "delivery_link": "Delivery service URL (if available, otherwise null)",
+    "features": [
+      "Outdoor seating",
+      "Accepts credit cards",
+      "Vegan-friendly"
+    ],
+    "thumbnail_images": [
+      "Thumbnail image 1 URL",
+      "Thumbnail image 2 URL",
+      "Thumbnail image 3 URL"
+    ]
+  },
+  // ... more cleaned restaurant objects
+]
+
+Contribution
+
+If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on the repository where this code is hosted.
+
+License
+
+This project is open-source and available under the MIT License.
