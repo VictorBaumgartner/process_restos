@@ -1,23 +1,27 @@
-# JSON Data Cleaning and Renaming Script (Vegan Restaurants)
+# 🥗 JSON Data Cleaning and Renaming Script (Vegan Restaurants)
 
 ## Redacted by Victor
 
 This Python script is designed to streamline and normalize raw JSON data pertaining to vegan restaurants. It renames cryptic field keys to more descriptive and human-readable names, and removes redundant or less essential information, making the data more accessible and useful for further analysis or integration.
 
-## Table of Contents
+---
 
-- [Features](#features)
-- [How It Works](#how-it-works)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
-- [Input JSON Format](#input-json-format)
-- [Output JSON Format](#output-json-format)
-- [Contribution](#contribution)
-- [License](#license)
+## 📖 Table of Contents
 
-## Features
+- [✨ Features](#-features)
+- [⚙️ How It Works](#%EF%B8%8F-how-it-works)
+- [🚀 Getting Started](#-getting-started)
+  - [✔️ Prerequisites](#%EF%B8%8F-prerequisites)
+  - [⬇️ Installation](#%EF%B8%8F-installation)
+  - [▶️ Usage](#%EF%B8%8F-usage)
+- [📥 Input JSON Format](#-input-json-format)
+- [📤 Output JSON Format](#-output-json-format)
+- [🤝 Contribution](#-contribution)
+- [©️ License](#%EF%B8%8F-license)
+
+---
+
+## ✨ Features
 
 * **Intelligent Field Renaming**: Converts obscure field names (e.g., `mr1`, `flex`, `lineclamp1`, `textgray800`) into intuitive ones (e.g., `rating`, `review_count`, `cuisine_type`, `full_description`).
 * **Data Cleaning**: Strips unnecessary characters (e.g., `tel:` prefix from phone numbers, parentheses from review counts).
@@ -26,29 +30,33 @@ This Python script is designed to streamline and normalize raw JSON data pertain
 * **Automatic File Handling**: Reads from a predefined input JSON file and writes to a new, cleaned JSON file, all within the current working directory.
 * **Robust Error Handling**: Includes checks for file existence, valid JSON format, and expected data structure.
 
-## How It Works
+---
+
+## ⚙️ How It Works
 
 The script operates in a few simple steps:
 
-1.  **Locate Input File**: It looks for a JSON file named `vegan_resto.json` in the same directory where the script is executed.
-2.  **Load Data**: Reads the content of `vegan_resto.json` and parses it into a Python list of dictionaries.
-3.  **Process Each Record**: Iterates through each restaurant's data (dictionary) in the loaded list.
+1.  **Locate Input File** 🔍: It looks for a JSON file named `vegan_resto.json` in the same directory where the script is executed.
+2.  **Load Data** 💾: Reads the content of `vegan_resto.json` and parses it into a Python list of dictionaries.
+3.  **Process Each Record** 🔄: Iterates through each restaurant's data (dictionary) in the loaded list.
     * For each restaurant, it creates a new dictionary with standardized, clear field names.
     * It extracts and cleans data from the original fields as necessary.
     * Less essential original fields are omitted from the new, cleaned record.
-4.  **Save Output**: Writes the entire list of processed restaurant data to a new JSON file named `cleaned_vegan_resto.json` in the current working directory, formatted for readability.
+4.  **Save Output** ✅: Writes the entire list of processed restaurant data to a new JSON file named `cleaned_vegan_resto.json` in the current working directory, formatted for readability.
 
-## Getting Started
+---
 
-### Prerequisites
+## 🚀 Getting Started
+
+### ✔️ Prerequisites
 
 * Python 3.6 or higher installed on your system.
 
-### Installation
+### ⬇️ Installation
 
 No special installation is required beyond having Python. Simply download the script file (`.py`) and place it in the directory where your JSON data resides.
 
-### Usage
+### ▶️ Usage
 
 1.  **Save the script**: Save the provided Python code as `clean_restaurants.py` (or any other `.py` name you prefer) in a folder on your computer.
 2.  **Prepare your data**: Place your raw JSON data file containing vegan restaurant information in the **same folder** as the script. **Crucially, this file must be named `vegan_resto.json`**. The JSON should be an array (list) of objects, where each object represents a restaurant.
@@ -74,7 +82,9 @@ No special installation is required beyond having Python. Simply download the sc
     ```
 4.  **Check the output**: After execution, a new file named `cleaned_vegan_resto.json` will be created in the same directory, containing your beautifully organized and renamed restaurant data.
 
-## Input JSON Format
+---
+
+## 📥 Input JSON Format
 
 The script expects an input JSON file named `vegan_resto.json` in the following general structure:
 
@@ -96,7 +106,7 @@ The script expects an input JSON file named `vegan_resto.json` in the following 
     "fontnormal": "Full address",
     "wauto": "Read Reviews link text (less essential)",
     "Field1": "",
-    "Field2": "Website URL (e.g., 'apeti.fr')",
+    "Field2": "Website URL (e.g., 'example.com')",
     "Field3": "Duplicate phone number (less essential)",
     "Field4": "Combined description and hours (mostly redundant)",
     "Field5": "Combined categories and description (mostly redundant)",
@@ -113,8 +123,7 @@ The script expects an input JSON file named `vegan_resto.json` in the following 
   // ... more restaurant objects
 ]
 
-
-Output JSON Format
+📤 Output JSON Format
 
 The cleaned_vegan_resto.json file will contain data structured as follows:
 JSON
@@ -148,10 +157,10 @@ JSON
   // ... more cleaned restaurant objects
 ]
 
-Contribution
+🤝 Contribution
 
-If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on the repository where this code is hosted.
+If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on the repository where this code is hosted. Your contributions are welcome!
 
-License
+©️ License
 
 This project is open-source and available under the MIT License.
